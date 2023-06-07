@@ -16,7 +16,6 @@ For the local network:
     -   Study: 8 posts
     -   Production: 10 posts
 -   2 support sectors (each with 30 posts)
--   1 Active Directory (AD) server
 -   1 DNS server
 -   1 DHCP server
 -   1 storage server (iSCSI)
