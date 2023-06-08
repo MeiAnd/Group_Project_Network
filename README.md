@@ -4,26 +4,32 @@ This network building exercise was completed as a group project by our team. We 
 
 Note: We utilized Cisco Packet Tracer for network simulation throughout the project.
 
+## Contributors
+[Alexandre Ntougas](https://github.com/alexandrentougas)
+[Gökhan Demir](https://github.com/IamGokhanDemir)
+[Meilyn Andrade](https://github.com/MeiAnd)
+[Itab Jelassi](https://github.com/Totto9)
+
 ## Components
 
 For the local network:
 
 -   1 router (Router 0)
--   1 switch for each department (Management, Secretariat, Study, Production)
+-   1 switch for each department except support(Management, Secretariat, Study, Production)
 -   4 sectors:
     -   Management: 5 posts
     -   Secretariat: 5 posts
     -   Study: 8 posts
     -   Production: 10 posts
--   2 support sectors (each with 30 posts)
+-   2 support sectors (each with 30 posts) each split on 2 switches linked to a 3rd one
 -   1 DNS server
 -   1 DHCP server
 -   1 storage server (iSCSI)
 
 Additional Components:
 
--   External server with IP 233.200.100.10
--   Router with IP 223.200.100.1/24 on port 0/0/1 and IP 192.170.1.2 on port 0/0/0
+-   External web server with IP 233.200.100.10
+-   Exeternal Router (Router 1) with IP 223.200.100.1/24 on port 0/0/1 and IP 192.170.1.2 on port 0/0/0
 -   CloudPT, modem, and switch connected to Router 0 on port 0/0/1 with IP 192.170.1.1 to simulate internet access.
 
 ## Step-by-step Configuration
@@ -44,12 +50,14 @@ Additional Components:
     
     We enabled the DHCP server and connected it to the network.
     
-    -   The DHCP server was set up to automatically assign DHCP IP addresses to end devices, using the default gateway 192.168.100.254.
+    -   The server's IP address is 192.168.100.253.
+    -   The DHCP server was set up to automatically assign DHCP IP addresses to end devices, using the default gateway 192.168.100.254. -   The starting IP address for attribution is 192.168.100.0 with a maximum of 256 users.
 3.  **Configure DNS server:**
     
     We connected the DNS server to the network.
     
-    -   The DNS server was configured with an example address and assigned the IP 233.200.100.
+    -   The server's IP address is 192.168.100.251.
+    -   The DNS server was configured with an example "A record" translating google to IP address 233.200.100.10.
 4.  **Configure storage server:**
     
     We connected the storage server to the network.
@@ -61,13 +69,15 @@ Additional Components:
     Using Cisco Packet Tracer, we simulated the switches for each department (Management, Secretariat, Study, Production).
     
     -   The switches were connected to the network to establish communication between the departments.
-    -   We segregated the departments by giving them their own switch witch also allows you to easily expand the network
+    -   We segregated the departments by giving them their own switch witch also allows you to easily expand the network.
 6.  **External server and router setup:**
  
-    -   The external server was connected to Router 0's port 0/0/1.
-    -   We configured the external server with the IP 233.200.100.10.
-    -   Router 0's port 0/0/1 was connected to the router with the IP 223.200.100.1/24 on port 0/0/1 and IP 192.170.1.2 on port 0/0/0.
-    -   The modem and switch were connected to Router 0's port 0/0/1, with the switch being assigned the IP 192.170.1.1.
+    -   The modem and switch were connected to Router 0's port 0/0/1, being assigned the IP 192.170.1.1.
+    -   The external web server configured with the IP 233.200.100.10 was connected to Router 1's port 0/0/1.
+    -   The cloud in-between made the link between our local network and the web server by going in the cloud's Modem4 interface and going out it's Ethernet6 interface. This had to be added in the cloud DSL connection tab.
+    -   Router 1 was linked to the cloud through port 0/0/0 configured with the IP address 192.170.1.2.
+    -   RIP routing was added to the routers. 192.168.100.0 and 192.170.1.0 for Router 0. 192.170.1.0 and 223.200.100.0 for Router 1.
+    
 
 ## Project Presentation
 
