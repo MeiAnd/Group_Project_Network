@@ -5,17 +5,17 @@ This network building exercise was completed as a group project by our team. We 
 Note: We utilized Cisco Packet Tracer for network simulation throughout the project.
 
 ## Contributors
-[Alexandre Ntougas](https://github.com/alexandrentougas)
-[Gökhan Demir](https://github.com/IamGokhanDemir)
-[Meilyn Andrade](https://github.com/MeiAnd)
-[Itab Jelassi](https://github.com/Totto9)
+- [Alexandre Ntougas](https://github.com/alexandrentougas)
+- [Gökhan Demir](https://github.com/IamGokhanDemir)
+- [Meilyn Andrade](https://github.com/MeiAnd)
+- [Itab Jelassi](https://github.com/Totto9)
 
 ## Components
 
 For the local network:
 
 -   1 router (Router 0)
--   1 switch for each department except support(Management, Secretariat, Study, Production)
+-   1 switch for each department except support (Management, Secretariat, Study, Production)
 -   4 sectors:
     -   Management: 5 posts
     -   Secretariat: 5 posts
@@ -51,7 +51,8 @@ Additional Components:
     We enabled the DHCP server and connected it to the network.
     
     -   The server's IP address is 192.168.100.253.
-    -   The DHCP server was set up to automatically assign DHCP IP addresses to end devices, using the default gateway 192.168.100.254. -   The starting IP address for attribution is 192.168.100.0 with a maximum of 256 users.
+    -   The DHCP server was set up to automatically assign DHCP IP addresses to end devices, using the default gateway 192.168.100.254.
+    -   The starting IP address for attribution is 192.168.100.0 with a maximum of 256 users.
 3.  **Configure DNS server:**
     
     We connected the DNS server to the network.
