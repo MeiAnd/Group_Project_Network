@@ -5,10 +5,10 @@ This network building exercise was completed as a group project by our team. We 
 Note: We utilized Cisco Packet Tracer for network simulation throughout the project.
 
 ## Contributors
-- [Alexandre Ntougas](https://github.com/alexandrentougas)
-- [Gökhan Demir](https://github.com/IamGokhanDemir)
 - [Meilyn Andrade](https://github.com/MeiAnd)
+- [Gökhan Demir](https://github.com/IamGokhanDemir)
 - [Itab Jelassi](https://github.com/Totto9)
+- [Alexandre Ntougas](https://github.com/alexandrentougas)
 
 ## Components
 
